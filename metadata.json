@@ -1,0 +1,8 @@
+{
+  "name": "AR CONTROL | Sport Live Cam",
+  "description": "Professional-grade sports broadcasting architecture for Android. Cyberpunk identity, NDK core, and 2K zero-copy multimedia pipeline.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      This is a placeholder for the main application theme.
+      It should be defined with the app's primary styles.
+    -->
+    <style name="Theme.ARControl" parent="android:Theme.Material.NoActionBar" />
+
+    <!--
+      Production-Ready Splash Screen Theme for Android 12 and above.
+      This theme is applied by the system IMMEDIATELY upon app launch.
+      It must be referenced in AndroidManifest.xml for the main activity:
+      android:theme="@style/Theme.App.Starting"
+    -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Solid background color for the native splash screen window. -->
+        <item name="windowSplashScreenBackground">#050a14</item>
+
+        <!--
+          The icon for the center of the splash screen. MUST be a Vector Drawable.
+          For animations, an AnimationDrawable or AnimatedVectorDrawable can be used.
+          This resource (@drawable/ic_splash_logo) must exist in the project's res/drawable folder.
+        -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        
+        <!--
+          Optional background color for the icon area. Transparent is recommended for a clean look.
+        -->
+        <item name="windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
+
+        <!-- The theme to apply to the Activity AFTER the splash screen has finished. -->
+        <item name="postSplashScreenTheme">@style/Theme.ARControl</item>
+
+        <!-- Optional: Duration of the splash screen's exit animation. -->
+        <item name="windowSplashScreenAnimationDuration">500</item>
+    </style>
+</resources>

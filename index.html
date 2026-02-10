@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR CONTROL | Sport Live Cam Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@400;700;900&display=swap');
+        
+        :root {
+            --ar-black: #050a14;
+            --ar-dark-grey: #121212;
+            --ar-cyan: #00e5ff;
+            --ar-red: #ff0040;
+            --ar-border: rgba(0, 229, 255, 0.2);
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--ar-black);
+            color: #f8fafc;
+            overflow: hidden;
+            letter-spacing: -0.02em;
+        }
+
+        .ar-font-inter { font-family: 'Inter', sans-serif; }
+        
+        .glass { 
+            background: rgba(18, 18, 18, 0.85); 
+            backdrop-filter: blur(16px); 
+            border: 1px solid var(--ar-border);
+        }
+
+        .neon-border {
+            border: 1px solid var(--ar-cyan);
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+        }
+
+        .neon-text-cyan {
+            color: var(--ar-cyan);
+            text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+        }
+
+        .neon-text-red {
+            color: var(--ar-red);
+            text-shadow: 0 0 8px rgba(255, 0, 64, 0.5);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 229, 255, 0.1);
+            position: absolute;
+            top: 0;
+            z-index: 100;
+            pointer-events: none;
+            animation: scanline 8s linear infinite;
+        }
+
+        @keyframes scanline {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+
+        .grid-bg {
+            background-image: radial-gradient(circle, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+<body class="grid-bg">
+    <div class="scanline"></div>
+    <div id="root"></div>
+</body>
+</html>
